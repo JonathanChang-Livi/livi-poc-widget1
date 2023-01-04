@@ -10,7 +10,7 @@ const DemoWidget = () => {
                         <p className="text-secondary text-sm font-semibold mt-4">Account Summary: </p>
                     </div>
                     <div className="flex flex-col h-full justify-end">
-                        <p className="text-primary text-2xl font-bold">$999,999,999</p>
+                        <p className="text-secondary text-2xl font-bold">$999,999,999</p>
                     </div>
                 </div>
             </CardBody>
