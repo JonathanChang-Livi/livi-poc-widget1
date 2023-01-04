@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@module-federation/nextjs-mf": "^6.0.1",
     "livi-poc-core": "^0.1.3",
     "next": "latest",
     "react": "18.2.0",
