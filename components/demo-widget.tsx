@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const DemoWidget = ({ className, override, style }: ComponentProps) => {
     return (
-        <Card className={`${override && override ? '' : ''} ${className || ''}`} style={style}>
+        <Card className={`${override && override ? '' : 'flex flex-col rounded-lg filter drop-shadow-md bg-primary'} ${className || ''}`} style={style}>
             <CardBody>
                 <div className="flex flex-row justify-between items-end">
                     <div className="flex flex-col">
