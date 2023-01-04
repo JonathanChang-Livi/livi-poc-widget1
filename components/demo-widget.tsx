@@ -4,7 +4,7 @@ import Image from "next/image"
 const DemoWidget = () => {
     return (
 
-        <Card className="bg-primary">
+        <Card className="bg-primary rounded-lg">
             <CardBody>
                 <div className="flex flex-row justify-between items-end">
                     <div className="flex flex-col">
