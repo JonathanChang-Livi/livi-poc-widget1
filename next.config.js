@@ -9,7 +9,7 @@ const nextConfig = {
         filename: "remoteEntry.js", // remote file name which will used later
         remoteType: "var",
         exposes: { // expose all component here.
-          "./demo": "./src/component/demo-widget"
+          "./demo": "./src/components/demo-widget"
         },
         shared: [
           {
