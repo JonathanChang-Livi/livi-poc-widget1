@@ -2,7 +2,7 @@ import { Card, CardBody } from "livi-poc-core"
 
 const DemoWidget = () => {
     return (
-        <Card className='flex flex-col rounded-lg filter drop-shadow-md bg-gradient-to-r from-primary via-primary to-secondary h-full' override>
+        <Card className='flex flex-col rounded-lg filter drop-shadow-md bg-gradient-to-tr from-primary via-primary to-secondary-dark h-full' override>
             <CardBody className="p-4 h-full" override>
                 <div className="flex flex-row justify-between items-end h-full">
                     <div className="flex flex-col h-full justify-between">
@@ -10,7 +10,7 @@ const DemoWidget = () => {
                         <p className="text-secondary text-sm font-semibold mt-4">Account Summary: </p>
                     </div>
                     <div className="flex flex-col h-full justify-end">
-                        <p className="text-secondary text-xl font-bold">$999,999,999</p>
+                        <p className="text-primary text-2xl font-bold">$999,999,999</p>
                     </div>
                 </div>
             </CardBody>
