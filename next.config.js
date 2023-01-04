@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  distDir: 'build',
   webpack: (config, options) => { // webpack configurations
     config.plugins.push(
       new options.webpack.container.ModuleFederationPlugin({
