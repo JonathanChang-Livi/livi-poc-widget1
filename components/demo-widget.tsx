@@ -22,9 +22,9 @@ const DemoWidget = () => {
                     </div>
                     <div className="flex flex-row justify-between items-center w-full my-5">
                         <div className="w-1/2 flex flex-col items-start border-slate-200 border-r-2 pr-5">
-                            <div className="flex flex-row w-full">
+                            <div className="flex flex-row w-full items-center">
                                 <p className="text-slate-600 mr-4">{'Account Balance (HKD Equ.)'}</p>
-                                <Button onClick={() => setShowBal(state => !state)}>
+                                <Button onClick={() => setShowBal(state => !state)} override>
                                     {
                                         showBal ?
                                             <IconEye size={24} className="text-slate-600" />
@@ -51,13 +51,13 @@ const DemoWidget = () => {
                         <div className="w-full bg-slate-200 p-5 h-full rounded-lg">
                             <div className="flex flex-col my-2">
                                 <p className="text-slate-600">{'港幣 HKC'}</p>
-                                <p className="text-slate-700 font-black">3,000,000</p>
+                                <p className="text-slate-700 font-black my-3">3,000,000</p>
                             </div>
                         </div>
                         <div className="w-full bg-slate-200 p-5 h-full rounded-lg">
                             <div className="flex flex-col my-2">
                                 <p className="text-slate-600">{'人民幣 CNY'}</p>
-                                <p className="text-slate-700 font-black">5,000</p>
+                                <p className="text-slate-700 font-black my-3">5,000</p>
                                 <p className="text-slate-600">{'(4,820.20 CNY)'}</p>
                             </div>
                         </div>
