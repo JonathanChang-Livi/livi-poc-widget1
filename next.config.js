@@ -18,7 +18,12 @@ const nextConfig = {
           './logo': './public/logo-livi-letter.svg',
         },
         shared: {
-          // whatever else
+          'react': {
+            singleton: true
+          },
+          'react-dom': {
+            singleton: true
+          }
         },
       })
     );
