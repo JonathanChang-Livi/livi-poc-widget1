@@ -15,7 +15,7 @@ const DemoWidget = () => {
                 }
             />
             <CardBody>
-                <div className="flex flex-col w-full">
+                <div className="flex flex-col w-full justify-between">
                     <div className="flex flex-row justify-between items-center w-full my-2">
                         <p className="text-slate-600">Account Number</p>
                         <p className="text-slate-700 font-black">388-756-0-12345678</p>
