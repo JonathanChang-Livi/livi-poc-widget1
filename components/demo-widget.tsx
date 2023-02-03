@@ -14,7 +14,7 @@ const DemoWidget = () => {
                     </div>
                 }
             />
-            <CardBody>
+            <CardBody className="h-full">
                 <div className="flex flex-col w-full justify-between h-full">
                     <div className="flex flex-row justify-between items-center w-full my-2">
                         <p className="text-slate-600">Account Number</p>
@@ -48,20 +48,20 @@ const DemoWidget = () => {
                         </div>
                     </div>
                     <div className="grid grid-cols-3 w-full gap-5">
-                        <div className="w-full bg-slate-200 h-full rounded-lg">
+                        <div className="w-full bg-slate-200 h-full p-2 rounded-lg">
                             <div className="flex flex-col h-full justify-around">
                                 <p className="text-slate-600">{'港幣 HKC'}</p>
                                 <p className="text-slate-700 font-black my-2">3,000,000</p>
                             </div>
                         </div>
-                        <div className="w-full bg-slate-200 h-full rounded-lg">
+                        <div className="w-full bg-slate-200 h-full p-2 rounded-lg">
                             <div className="flex flex-col h-full justify-around">
                                 <p className="text-slate-600">{'人民幣 CNY'}</p>
                                 <p className="text-slate-700 font-black my-2">5,000</p>
                                 <p className="text-slate-600">{'(4,820.20 CNY)'}</p>
                             </div>
                         </div>
-                        <div className="w-full bg-slate-200 h-full rounded-lg">
+                        <div className="w-full bg-slate-200 h-full p-2 rounded-lg">
                             <div className="flex flex-col h-full justify-around">
                                 <p className="text-slate-600">{'美元 USD'}</p>
                                 <p className="text-slate-700 font-black my-2">200,000</p>
