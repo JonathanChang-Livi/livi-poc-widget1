@@ -47,22 +47,22 @@ const DemoWidget = () => {
                             <p className="text-slate-700 font-black mt-2 text-2xl">{'3,105,000,000'}</p>
                         </div>
                     </div>
-                    <div className="grid grid-cols-3 w-full my-2 gap-5">
-                        <div className="w-full bg-slate-200 p-2 h-full rounded-lg">
-                            <div className="flex flex-col my-2">
+                    <div className="grid grid-cols-3 w-full gap-5">
+                        <div className="w-full bg-slate-200 h-full rounded-lg">
+                            <div className="flex flex-col h-full justify-around">
                                 <p className="text-slate-600">{'港幣 HKC'}</p>
                                 <p className="text-slate-700 font-black my-2">3,000,000</p>
                             </div>
                         </div>
-                        <div className="w-full bg-slate-200 p-2 h-full rounded-lg">
-                            <div className="flex flex-col my-2">
+                        <div className="w-full bg-slate-200 h-full rounded-lg">
+                            <div className="flex flex-col h-full justify-around">
                                 <p className="text-slate-600">{'人民幣 CNY'}</p>
                                 <p className="text-slate-700 font-black my-2">5,000</p>
                                 <p className="text-slate-600">{'(4,820.20 CNY)'}</p>
                             </div>
                         </div>
-                        <div className="w-full bg-slate-200 p-2 h-full rounded-lg">
-                            <div className="flex flex-col my-2">
+                        <div className="w-full bg-slate-200 h-full rounded-lg">
+                            <div className="flex flex-col h-full justify-around">
                                 <p className="text-slate-600">{'美元 USD'}</p>
                                 <p className="text-slate-700 font-black my-2">200,000</p>
                                 <p className="text-slate-600">{'(25,477.70 USD)'}</p>
