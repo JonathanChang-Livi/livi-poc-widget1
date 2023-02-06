@@ -9,8 +9,8 @@ const DemoWidget = () => {
             <CardHeader override
                 custom={
                     <div className=" rounded-t-lg bg-slate-200 p-4 flex flex-row justify-between">
-                        <Title className="font-black">Account Details</Title>
-                        <Title bold className=" text-blue-500 hover:underline hover:font-black">{`View Account Details >`}</Title>
+                        <Title className="font-black" override>Account Details</Title>
+                        <Title className=" text-blue-600 hover:underline hover:font-black" override>{`View Account Details >`}</Title>
                     </div>
                 }
             />
