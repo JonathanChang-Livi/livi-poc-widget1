@@ -95,11 +95,11 @@ const DemoWidget = () => {
     if (loading) {
         return (
             <BaseCard>
-                <div role="status" className="animate-pulse w-full">
-                    <div className="animate-pulse h-8 bg-gray-200 rounded-full dark:bg-gray-700 w-1/2 mb-8"></div>
-                    <div className="h-5 bg-gray-200 rounded-full dark:bg-gray-700 mb-3"></div>
-                    <div className="h-5 bg-gray-200 rounded-full dark:bg-gray-700 mb-3"></div>
-                    <div className="h-5 bg-gray-200 rounded-full dark:bg-gray-700 mb-3"></div>
+                <div role="status" className="animate-pulse w-full flex flex-col justify-between">
+                    <div className="h-8 bg-gray-200 rounded-full dark:bg-gray-700 w-1/2"></div>
+                    <div className="h-5 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                    <div className="h-5 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                    <div className="h-5 bg-gray-200 rounded-full dark:bg-gray-700"></div>
                     <div className="h-5 bg-gray-200 rounded-full dark:bg-gray-700"></div>
                 </div>
             </BaseCard>
