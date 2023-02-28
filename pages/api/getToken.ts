@@ -7,8 +7,8 @@ export default withIronSessionApiRoute(loginRoute, ironOptions);
 async function loginRoute(
     req: NextApiRequest,
     res: NextApiResponse) {
-    // get user from database then:
-    req.session.token = "asodioiajsodi"
+    const newTkn = "asodioiajsodi"
+    req.session.token = newTkn
     await req.session.save()
-    res.send({token: req.session.token});
+    res.send({token: req.session.token})
 }

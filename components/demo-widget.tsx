@@ -64,35 +64,34 @@ const thousandBitSeparater = (n: number) => {
     return numberPart.replace(thousands, ",") + (decimalPart ? "." + decimalPart : "");
 }
 
-const DemoWidget = async () => {
+const getToken = async () => {
+    const res = await fetch("/api/getToken", {
+        method: "POST"
+    }).then(data => data.json()).catch((err) => { return undefined });
+    return res === undefined || res.token === undefined ? undefined : res.token
+}
+
+const DemoWidget = () => {
     const [showBal, setShowBal] = useState(false)
     const [loading, setLoading] = useState(true)
-    const token = await fetch("/api/getToken", {
-        method: "POST"
-    });
     const [summary, setSummary] = useState(INIT_ACCOUNT_SUMMARY)
+    const [token, setToken] = useState<string | undefined>(undefined)
 
     useEffect(() => {
-        if(!token){
-            setLoading(false)
-            return
-        }
         setTimeout(() => {
-            setSummary(DEMO_ACCOUNT_SUMMARY)
-            setLoading(false)
+            getToken().then(data => {
+                const tkn = data
+                if (!tkn) {
+                    setLoading(false)
+                    return
+                }
+                setSummary(DEMO_ACCOUNT_SUMMARY)
+                setLoading(false)
+                setToken(tkn)
+                return
+            })
         }, 3000)
     }, [])
-
-    if(!token){
-        return (
-            <BaseCard>
-                <div className="w-full h-full flex justify-center items-center">
-                    <p className="text-4xl text-red-700">WARNING: Unauthorized call</p>
-                </div>
-            </BaseCard>
-        )
-    }
-
     if (loading) {
         return (
             <BaseCard>
@@ -106,6 +105,17 @@ const DemoWidget = async () => {
             </BaseCard>
         )
     }
+
+    if (!token) {
+        return (
+            <BaseCard>
+                <div className="w-full h-full flex justify-center items-center">
+                    <p className="text-4xl text-red-700">WARNING: Unauthorized call</p>
+                </div>
+            </BaseCard>
+        )
+    }
+
     return (
         <BaseCard>
             <div className="flex flex-col w-full justify-between h-full">
@@ -129,7 +139,7 @@ const DemoWidget = async () => {
                         <p className="text-slate-700 font-black mt-2 text-2xl">
                             {
                                 showBal ?
-                                thousandBitSeparater(summary.accBalance)
+                                    thousandBitSeparater(summary.accBalance)
                                     :
                                     '***'
                             }
