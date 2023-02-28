@@ -1,5 +1,4 @@
 import { IconEye, IconEyeOff } from "@tabler/icons-react"
-import { getCookie } from "cookies-next"
 import { Button, Card, CardBody, CardHeader, Title } from "livi-poc-core"
 import { useEffect, useState } from "react"
 
@@ -65,10 +64,12 @@ const thousandBitSeparater = (n: number) => {
     return numberPart.replace(thousands, ",") + (decimalPart ? "." + decimalPart : "");
 }
 
-const DemoWidget = () => {
+const DemoWidget = async () => {
     const [showBal, setShowBal] = useState(false)
     const [loading, setLoading] = useState(true)
-    const token = getCookie('auth-token')
+    const token = await fetch("/api/getToken", {
+        method: "POST"
+    });
     const [summary, setSummary] = useState(INIT_ACCOUNT_SUMMARY)
 
     useEffect(() => {
